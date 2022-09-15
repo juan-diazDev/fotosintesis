@@ -15,8 +15,9 @@ const PostSchema = new Schema({
   likes: {
     type: String,
   },
-
-
+  saved: {
+    type: String,
+  }
 }, { versionKey: false, timestamps: true });
 
 const Blogpost = model('blogpost', PostSchema);
