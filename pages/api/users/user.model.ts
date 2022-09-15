@@ -60,3 +60,5 @@ const UserSchema = new Schema({
 }, { versionKey: false, timestamps: true });
 
 const User = model('user', UserSchema);
+
+export default User;
