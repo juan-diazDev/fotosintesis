@@ -30,18 +30,31 @@ const UserSchema = new Schema({
   avatar: {
     type: String,
   },
+  description: {
+    type: String,
+    trim: true,
+  },
+  shortDescription: {
+    trype: String,
+    trim: true,
+  },
   location: {
     country: {
       type: String,
+      trim: true,
     },
     city: {
       type: String,
+      trim: true,
     },
   },
   blogpost: [{
     type: Schema.Types.ObjectId,
     ref: 'blogpost',
-    required: true,
+  }],
+  favs: [{
+    type: Schema.Types.ObjectId,
+    ref: 'blogpost',
   }],
   isVerified: {
     type: Boolean,
@@ -49,11 +62,11 @@ const UserSchema = new Schema({
   },
   followers: [{
     type: Schema.Types.ObjectId,
-    ref: "user",
+    ref: 'user',
   }],
   following: [{
     type: Schema.Types.ObjectId,
-    ref: "user",
+    ref: 'user',
   }],
   passwordResetToken: String,
   passwordResetExpires: Date,
