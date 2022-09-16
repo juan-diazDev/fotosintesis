@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import connectDB from '../../../server/config/database';
+import crypto from 'crypto';
 import { createUser } from '../../../server/users/user.services';
 
 export default async (req, res) => {
@@ -7,6 +8,12 @@ export default async (req, res) => {
   const userData = req.body
 
   try {
+    const hash = crypto.createHash('sha256')
+      .update(userData.email)
+      .digest('hex');
+
+    userData.passwordResetToken = hash;
+    userData.passwordResetExpires = Date.now() + 3_600_000 * 24;
     const user = await createUser(userData);
 
     if (req.method !== 'POST') {
