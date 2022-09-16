@@ -19,7 +19,7 @@ export function verfyToken(token) {
   }
 }
 
-export async function isAuthenticated(req, res, next) {
+export async function isAuthenticated(req, res) {
   const authHeader = req.headers?.authorization;
 
   if (!authHeader) {
@@ -42,6 +42,5 @@ export async function isAuthenticated(req, res, next) {
 
   req.user = user;
 
-  next();
   return true;
 }
