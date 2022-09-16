@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, models } from 'mongoose';
 
 const PostSchema = new Schema({
   title: {
@@ -26,4 +26,4 @@ const PostSchema = new Schema({
 
 const Blogpost = model('blogpost', PostSchema);
 
-export default Blogpost;
+export default Blogpost || models.Blogpost;

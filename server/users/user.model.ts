@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from 'mongoose';
+import { Schema, model, models} from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const UserSchema = new Schema({
@@ -73,21 +73,6 @@ const UserSchema = new Schema({
   passwordResetExpires: Date,
 }, { versionKey: false, timestamps: true });
 
-UserSchema.virtual('profile').get(function () {
-  const {
-    firstName,
-    lastName,
-    email,
-    username,
-  } = this;
-
-  return {
-    firstName,
-    lastName,
-    email,
-    username,
-  };
-});
 UserSchema.pre('save', async function save(next) {
   const user = this;
 
@@ -104,18 +89,6 @@ UserSchema.pre('save', async function save(next) {
   }
 });
 
-UserSchema.methods.comparePassword = async function comparePassword(password, next) {
-  const user = this;
-
-  try {
-    const isMatch = await bcrypt.compare(password, user.password);
-    return isMatch;
-  } catch (error) {
-    next(error);
-    return false;
-  }
-};
-
 const User = model('user', UserSchema);
 
-export default mongoose.models.User || User;
+export default User || models.User;
