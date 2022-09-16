@@ -1,16 +1,5 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import bcrypt from 'bcryptjs';
-
-export interface UserDocument extends Document {
-  name: string;
-  email: string;
-  password?: string;
-  profile?: string;
-  role: string;
-  comparePassword(password: string): Promise<boolean>;
-  createdAt: Date;
-  updatedAt: Date;
-}
 
 const UserSchema = new Schema({
   firstName: {
@@ -99,18 +88,28 @@ UserSchema.virtual('profile').get(function () {
     username,
   };
 });
-
-UserSchema.methods.comparePassword = async function comparePassword(this: UserDocument, Userpassword: string, next: Function) {
+UserSchema.pre('save', async function save(next) {
   const user = this;
 
   try {
-    if (user.password) {
-      const isMatch = await bcrypt.compare(Userpassword, user.password);
-
-      return isMatch;
+    if (!user.isModified('password')) {
+      next();
     }
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(user.password, salt);
 
-    return false;
+    user.password = hash;
+  } catch (error) {
+    next(error);
+  }
+});
+
+UserSchema.methods.comparePassword = async function comparePassword(password, next) {
+  const user = this;
+
+  try {
+    const isMatch = await bcrypt.compare(password, user.password);
+    return isMatch;
   } catch (error) {
     next(error);
     return false;
