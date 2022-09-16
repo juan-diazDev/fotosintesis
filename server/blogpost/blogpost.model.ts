@@ -24,6 +24,4 @@ const PostSchema = new Schema({
   },
 }, { versionKey: false, timestamps: true });
 
-const Blogpost = model('blogpost', PostSchema);
-
-export default Blogpost || models.Blogpost;
+export default models.Blogpost || model('Blogpost', PostSchema);
