@@ -17,7 +17,11 @@ const PostSchema = new Schema({
   },
   saved: {
     type: String,
-  }
+  },
+  writer: {
+    type: Schema.Types.ObjectId,
+    require: true,
+  },
 }, { versionKey: false, timestamps: true });
 
 const Blogpost = model('blogpost', PostSchema);
