@@ -2,17 +2,7 @@ import bcrypt from 'bcryptjs';
 import { findUserByEmail } from "../../../../server/users/user.services";
 import { signToken } from "../../../../server/auth/local/auth.services";
 
-export interface UserDocument extends Document {
-  name: string;
-  email: string;
-  password?: string;
-  profile?: string;
-  comparePassword(password: string): Promise<boolean>;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-export async function loginUserHandler(req, res) {
+async function loginUserHandler(req, res) {
   const { email, password } = req.body;
 
   try {
@@ -34,8 +24,17 @@ export async function loginUserHandler(req, res) {
 
     const token = await signToken({ email: user.email });
 
-    return res.status(200).json({ token, email: user.email }); // bring profile
+    return res.status(200).json({
+      token,
+      profile: {
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        username: user.username,
+      } }); // bring profile
   } catch (error) {
-    return res.status(500).json({ error });
+    return res.status(500).json({ '[Error]': error.message });
   }
 }
+
+export default loginUserHandler;
