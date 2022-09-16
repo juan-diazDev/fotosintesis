@@ -1,11 +1,15 @@
 import bcrypt from 'bcryptjs';
+import connectDB from '../../../../server/config/database';
 import { findUserByEmail } from "../../../../server/users/user.services";
 import { signToken } from "../../../../server/auth/local/auth.services";
 
 async function loginUserHandler(req, res) {
+  connectDB();
+
   const { email, password } = req.body;
 
   try {
+
     if (!email || !password) {
       return res.status(400).json({ failed: 'All fields are required' });
     }

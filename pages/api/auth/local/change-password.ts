@@ -1,7 +1,10 @@
 import bcrypt from 'bcryptjs';
 import { getSingleUser, updateUser } from '../../../../server/users/user.services';
+import connectDB from '../../../../server/config/database';
 
 export async function changePassword(req, res) {
+  connectDB();
+
   try {
     const { id } = req.params;
     const { oldPassword } = req.body;
