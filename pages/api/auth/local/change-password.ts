@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import { getSingleUser } from "../../users/user.services";
+import { getSingleUser, updateUser } from '../../../../server/users/user.services';
 
 export async function changePassword(req, res) {
   try {
@@ -12,7 +12,7 @@ export async function changePassword(req, res) {
     if (!user) {
       return res.status(404).json({ message: 'Password incorrect' });
     }
-    const isMatch = await user.comparePassword(oldPassword);
+    const isMatch = await bcrypt.compare(oldPassword, user.password);
 
     if (!isMatch) {
       return res.status(404).json({ message: 'Password incorrect' });
@@ -24,7 +24,7 @@ export async function changePassword(req, res) {
 
     const salt = await bcrypt.genSalt(10);
     const password = await bcrypt.hash(req.body.password, salt);
-    const userPassword = await updateUser({ _id: id }, { password }, { new: true });
+    const userPassword = await updateUser({ _id: id, password }, { new: true });
     return res.status(200).json({ status: true, data: userPassword });
   } catch (error) {
     return res.status(400).json({ status: false, error: 'Error Occured' });
