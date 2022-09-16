@@ -36,7 +36,7 @@ const UserSchema = new Schema({
     trim: true,
   },
   shortDescription: {
-    trype: String,
+    type: String,
     trim: true,
   },
   location: {
