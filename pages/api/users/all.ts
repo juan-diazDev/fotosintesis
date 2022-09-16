@@ -3,7 +3,7 @@ import connectDB from '../../../server/config/database';
 import { getAllUsers } from '../../../server/users/user.services';
 
 export default async (req, res) => {
-  connectDB();
+  await connectDB();
 
   try {
     const user = await getAllUsers();

@@ -3,7 +3,7 @@ import { signToken } from "../../../../server/auth/local/auth.services";
 import connectDB from '../../../../server/config/database';
 
 export async function verifyAccountHandler(req, res) {
-  connectDB();
+  await connectDB();
 
   const { token } = req.params;
 

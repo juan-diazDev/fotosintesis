@@ -4,7 +4,7 @@ import { findUserByEmail } from "../../../../server/users/user.services";
 import { signToken } from "../../../../server/auth/local/auth.services";
 
 async function loginUserHandler(req, res) {
-  connectDB();
+  await connectDB();
 
   const { email, password } = req.body;
 

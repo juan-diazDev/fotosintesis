@@ -4,7 +4,7 @@ import crypto from 'crypto';
 import { createUser } from '../../../server/users/user.services';
 
 export default async (req, res) => {
-  connectDB();
+  await connectDB();
   const userData = req.body
 
   try {

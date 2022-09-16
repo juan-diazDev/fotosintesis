@@ -3,7 +3,7 @@ import { getSingleUser, updateUser } from '../../../../server/users/user.service
 import connectDB from '../../../../server/config/database';
 
 export async function changePassword(req, res) {
-  connectDB();
+  await connectDB();
 
   try {
     const { id } = req.params;

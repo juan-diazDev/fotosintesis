@@ -3,7 +3,7 @@ import connectDB from '../../../server/config/database';
 import { getAllBlogposts } from '../../../server/blogpost/blogpost.services';
 
 export default async (req, res) => {
-  connectDB();
+  await connectDB();
 
   try {
     const user = await getAllBlogposts();

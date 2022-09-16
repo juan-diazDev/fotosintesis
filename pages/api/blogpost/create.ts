@@ -3,7 +3,7 @@ import connectDB from '../../../server/config/database';
 import { createBlogpost } from '../../../server/blogpost/blogpost.services';
 
 export default async (req, res) => {
-  connectDB();
+  await connectDB();
 
   const spaceData = req.body;
   const { _id } = req.user;
