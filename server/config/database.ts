@@ -1,7 +1,7 @@
 import 'dotenv/config.js';
 import  mongoose from 'mongoose';
 
-function connectDB() {
+async function connectDB() {
   const URI = process.env.MONGO_URI;
 
   if (!process.env.MONGO_URI) {
@@ -9,7 +9,7 @@ function connectDB() {
   }
 
   try {
-    mongoose.connect(URI);
+   await mongoose.connect(URI);
   } catch (error) {
     console.error('Error trying to connect with DB', error);
     process.exit(1);
