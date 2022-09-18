@@ -6,7 +6,7 @@ export function getAllUsers() {
 
 export function getSingleUser(id) {
   return User.findById(id)
-  .populate(['blogpost', 'favs', 'followers', 'followings']);
+  // .populate(['blogpost', 'favs', 'followers', 'followings']);
 }
 
 export function findUserByEmail(email) {
