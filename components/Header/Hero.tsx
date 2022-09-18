@@ -5,10 +5,10 @@ import About from '../About';
 
 const Hero = () => {
   return (
-    <main className={styles.hero}>
+    <header className={styles.hero}>
       <NavMenu />
       <About />
-    </main>
+    </header>
   )
 }
 
