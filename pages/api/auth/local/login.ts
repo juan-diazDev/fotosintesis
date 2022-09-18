@@ -29,13 +29,7 @@ async function loginUserHandler(req, res) {
     const token = await signToken({ email: user.email });
 
     return res.status(200).json({
-      token,
-      profile: {
-        email: user.email,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        username: user.username,
-      } }); // bring profile
+      token, user }); // bring profile
   } catch (error) {
     return res.status(500).json({ '[Error]': error.message });
   }
