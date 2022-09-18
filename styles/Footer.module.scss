@@ -17,7 +17,7 @@
   margin-right: 6%;
   font-size: 1.05rem;
   color: #8a644c;
-  a {
+  p {
     color: #8a644c;
     height: min-content;
     border: .5px solid #8a644c;
@@ -25,7 +25,8 @@
     border-radius: 20px;
     letter-spacing: .8px;
     &:hover {
-      transition: 45s ease-in-out;
+      cursor: pointer;
+      transition: .45s ease-in-out;
       background-color: #8a644c;
       color: #f3e4dd;
     }

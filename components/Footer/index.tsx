@@ -7,11 +7,11 @@ const Footer = () => {
       <section className={styles.footer__by_container}>
         <p>© Bloggie by Casa Bhakti</p>
       </section>
-      <section className={styles.footer__contact_container}>
-        <Link href="/contact">
-          <a><b>Contact us</b></a>
-        </Link>
-      </section>
+      <Link href="/contact">
+        <section className={styles.footer__contact_container}>
+          <p><b>Contact us</b></p>
+        </section>
+      </Link>
     </footer>
   )
 }

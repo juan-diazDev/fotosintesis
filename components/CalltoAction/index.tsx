@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 import styles from '../../styles/CalltoAction.module.scss';
 
 const CalltoAction = () => {
@@ -11,11 +11,13 @@ const CalltoAction = () => {
           and why we do it, may be
         </h2>
       </div>
-      <div className={styles.calltoAction__button_container}>
-        <button className={styles.calltoAction__button}>
-          Get started
-        </button>
-      </div>
+      <Link href="/singup">
+        <div className={styles.calltoAction__button_container}>
+          <button className={styles.calltoAction__button}>
+            Get started
+          </button>
+        </div>
+      </Link>
     </section>
   )
 }
