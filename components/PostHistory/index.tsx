@@ -15,10 +15,10 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido</h3>
+            <h4>This is the post title y algo más de contenido</h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
         <article>
@@ -29,10 +29,10 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido</h3>
+            <h4>This is the post title y algo más de contenido</h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
         <article>
@@ -43,10 +43,10 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido</h3>
+            <h4>This is the post title y algo más de contenido</h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
         <article>
@@ -57,10 +57,10 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido</h3>
+            <h4>This is the post title y algo más de contenido</h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
         <article>
@@ -71,10 +71,10 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido</h3>
+            <h4>This is the post title y algo más de contenido</h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
         <article>
@@ -85,10 +85,52 @@ const PostHistory = () => {
             <p>This is the writer</p>
           </section>
           <section className={styles.post__card__title}>
-            <h3>This is the post title y algo más de contenido </h3>
+            <h4>This is the post title y algo más de contenido </h4>
           </section>
           <section className={styles.post__card__data}>
-            <p className={styles.date}>Sep 6</p>
+            <p className={styles.date}>Posted, Sep 6</p>
+          </section>
+        </article>
+        <article>
+          <section className={styles.post__card__writer}>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <p>This is the writer</p>
+          </section>
+          <section className={styles.post__card__title}>
+            <h4>This is the post title y algo más de contenido </h4>
+          </section>
+          <section className={styles.post__card__data}>
+            <p className={styles.date}>Posted, Sep 6</p>
+          </section>
+        </article>
+        <article>
+          <section className={styles.post__card__writer}>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <p>This is the writer</p>
+          </section>
+          <section className={styles.post__card__title}>
+            <h4>This is the post title y algo más de contenido </h4>
+          </section>
+          <section className={styles.post__card__data}>
+            <p className={styles.date}>Posted, Sep 6</p>
+          </section>
+        </article>
+        <article>
+          <section className={styles.post__card__writer}>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <p>This is the writer</p>
+          </section>
+          <section className={styles.post__card__title}>
+            <h4>This is the post title y algo más de contenido </h4>
+          </section>
+          <section className={styles.post__card__data}>
+            <p className={styles.date}>Posted, Sep 6</p>
           </section>
         </article>
       </section>
