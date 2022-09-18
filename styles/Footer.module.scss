@@ -1,0 +1,34 @@
+.footer__main_container {
+ width: 100%;
+ height: 7vh;
+ background-color: #dadada;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: row;
+ .footer__by_container {
+  margin-left: 5%;
+ }
+ .footer__contact_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 6%;
+  font-size: 1.05rem;
+  color: #8a644c;
+  a {
+    color: #8a644c;
+    height: min-content;
+    border: .5px solid #8a644c;
+    padding: 5px 20px 8px 20px;
+    border-radius: 20px;
+    letter-spacing: .8px;
+    &:hover {
+      transition: 45s ease-in-out;
+      background-color: #8a644c;
+      color: #f3e4dd;
+    }
+  }
+ }
+}
