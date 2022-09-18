@@ -6,7 +6,9 @@ export default async (req, res) => {
   await connectDB();
 
   const spaceData = req.body;
-  const { _id } = req.user;
+  // const { _id } = req.user;
+
+  const _id = '632474a0f48585c7244a50ca';
 
   try {
     const post = await createBlogpost({ ...spaceData, writer: _id });
