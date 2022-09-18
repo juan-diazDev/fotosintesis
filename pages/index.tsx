@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import CalltoAction from '../components/CalltoAction'
 import Footer from '../components/Footer'
@@ -6,7 +5,18 @@ import Header from '../components/Header'
 import PostHistory from '../components/PostHistory'
 import styles from '../styles/Home.module.scss'
 
-const Home: NextPage = () => {
+const BASE_URL = process.env.LOCAL_URL;
+
+export async function getServerSideProps() {
+  const res = await fetch(`${BASE_URL}/api/blogpost/all`)
+  const data = await res.json()
+
+  return {
+    props: { data }
+  }
+}
+
+const Home = ({ data }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +27,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <Header />
-        <PostHistory />
+        <PostHistory post={data} />
         <CalltoAction />
         <Footer />
       </main>
