@@ -19,7 +19,8 @@ const PostSchema = new Schema({
     type: String,
   },
   writer: {
-    type: Schema.Types.ObjectId,
+    type: String,
+    // type: Schema.Types.ObjectId,
     require: true,
   },
 }, { versionKey: false, timestamps: true });

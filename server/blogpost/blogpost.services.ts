@@ -13,12 +13,12 @@ export function findOneBlogpost(query) {
   return Blogpost.findOne(query);
 }
 
-export function createBlogpost(Blogpost) {
-  return Blogpost.create(Blogpost);
+export function createBlogpost(blogpost) {
+  return Blogpost.create(blogpost);
 }
 
-export function updateBlogpost(id, Blogpost) {
-  return Blogpost.findByIdAndUpdate(id, Blogpost, { new: true });
+export function updateBlogpost(id, blogpost) {
+  return Blogpost.findByIdAndUpdate(id, blogpost, { new: true });
 }
 
 export function deleteBlogpost(id) {
