@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import PostHistory from '../components/PostHistory'
 import styles from '../styles/Home.module.scss'
 
-const BASE_URL = process.env.LOCAL_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_LOCAL_URL;
 
 export async function getServerSideProps() {
   const res = await fetch(`${BASE_URL}/api/blogpost/all`)
