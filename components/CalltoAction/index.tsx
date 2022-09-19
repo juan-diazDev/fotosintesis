@@ -11,7 +11,7 @@ const CalltoAction = () => {
           and why we do it, may be
         </h2>
       </div>
-      <Link href="/singup">
+      <Link href="/sign-up">
         <div className={styles.calltoAction__button_container}>
           <button className={styles.calltoAction__button}>
             Get started
