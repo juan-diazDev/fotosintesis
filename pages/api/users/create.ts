@@ -4,6 +4,8 @@ import connectDB from '../../../server/config/database';
 import { createUser } from '../../../server/users/user.services';
 import { sendMailSendGrid } from '../../../server/config/email'
 
+const BASE_URL = process.env.LOCAL_URL;
+
 export default async (req, res) => {
   await connectDB();
   const userData = req.body;
@@ -28,7 +30,7 @@ export default async (req, res) => {
       template_id: 'd-df1380cc1da24d33ab9f925072819e6f',
       dynamic_template_data: {
         firstName: user.firstName,
-        url: `http://localhost:3000/verify-account/${hash}`
+        url: `${BASE_URL}/verify-account/${hash}`
       }
     }
 
