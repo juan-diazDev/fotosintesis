@@ -36,7 +36,7 @@ function SignupForm() {
       const result = await signup(data);
 
       if(result) {
-        router.push('/');
+        router.push('/verify-account');
       }
     } catch (error) {
       console.log(error.mesage);
