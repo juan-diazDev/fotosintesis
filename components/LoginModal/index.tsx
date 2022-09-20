@@ -28,8 +28,16 @@ const LoginForm = () => {
     try {
       const { target } = e;
 
+      if (!target) {
+        return console.log({ ERROR: 'No target'})
+      }
+
       const formData = new FormData(target);
       const data = Object.fromEntries(formData);
+
+      if (!data) {
+        return console.log({ ERROR: 'No data'})
+      }
 
       const result= await login(data);
       console.log('🚀 ~ file: index.tsx ~ line 35 ~ handleSubmit ~ token', result);

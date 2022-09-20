@@ -1,11 +1,14 @@
 import { findOneUser } from "../../../../server/users/user.services";
 import { signToken } from "../../../../server/auth/local/auth.services";
 import connectDB from '../../../../server/config/database';
+import { useRouter } from "next/router";
+
 
 export async function verifyAccountHandler(req, res) {
   await connectDB();
+  const router = useRouter();
 
-  const { token } = req.params;
+  const { token } = router.query;
 
   try {
     const user = await findOneUser({ passwordResetToken: token });

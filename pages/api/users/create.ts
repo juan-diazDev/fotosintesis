@@ -4,7 +4,7 @@ import connectDB from '../../../server/config/database';
 import { createUser } from '../../../server/users/user.services';
 import { sendMailSendGrid } from '../../../server/config/email'
 
-const BASE_URL = process.env.LOCAL_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_LOCAL_URL;
 
 export default async (req, res) => {
   await connectDB();

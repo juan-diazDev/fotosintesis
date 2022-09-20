@@ -8,12 +8,12 @@ export async function login(auth) {
     },
     body: JSON.stringify(auth),
   };
-  const response = await fetch(`${BASE_URL}/auth/local/login`, options);
+  const response = await fetch(`${BASE_URL}/api/auth/local/login`, options);
   return response.json();
 }
 
 export async function verify(token) {
-  const response = await fetch(`${BASE_URL}/auth/local/verifyAccount/${token}`);
+  const response = await fetch(`${BASE_URL}/api/auth/local/verify-account/${token}`);
   return response.json();
 }
 
