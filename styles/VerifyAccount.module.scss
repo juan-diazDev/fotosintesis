@@ -1,0 +1,43 @@
+.account_verification__main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 108px;
+  .account_verification__message_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+    border-top:0.5px solid rgba(0,0,0,0.08);
+    box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    .account_verification__image_container {
+      width: 70px;
+      height: 70px;
+      margin: 5px 20px 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    h3 {
+      font-family: nunito-semi-bold;
+
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .account_verification__main_container {
+    .account_verification__message_container {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}

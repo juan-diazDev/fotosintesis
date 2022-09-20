@@ -1,4 +1,4 @@
-import React from 'react'
+import SignupForm from '../SignupModal';
 import styles from '../../styles/About.module.scss';
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatem soluta? Amet, perferendis doloremque? Architecto esse a, non iste ipsam consequuntur enim maiores cumque expedita, sapiente temporibus rem cupiditate nemo.
       </p>
       <div className={styles.short__description__start__button}>
-        <button>Start reding!</button>
+        <SignupForm />
       </div>
     </section>
   )

@@ -1,5 +1,7 @@
+import SignupForm from '../SignupModal';
 import Link from 'next/link';
 import styles from '../../styles/Header.module.scss';
+import LoginForm from '../LoginModal';
 
 const Navbar = () => {
   return (
@@ -11,20 +13,12 @@ const Navbar = () => {
           </button>
         </article>
       </Link>
-      <Link href="/login">
-        <article className={styles.navbar__signin__button}>
-          <button type="button">
-            Sing in
-          </button>
-        </article>
-      </Link>
-      <Link href="/signup">
-        <article className={styles.navbar__get_started__button}>
-          <button type="button">
-            Get started
-          </button>
-        </article>
-      </Link>
+      <article className={styles.navbar__signin__button}>
+        <LoginForm />
+      </article>
+      <article className={styles.navbar__get_started__button}>
+        <SignupForm />
+      </article>
     </nav>
   )
 }

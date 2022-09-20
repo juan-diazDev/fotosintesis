@@ -28,8 +28,15 @@ async function loginUserHandler(req, res) {
 
     const token = await signToken({ email: user.email });
 
+    const profile = {
+      email: user.email,
+      username: user.username,
+      firstName: user.firstName,
+      lastName: user.lastName,
+    }
+
     return res.status(200).json({
-      token, user }); // bring profile
+      token, profile }); // bring profile
   } catch (error) {
     return res.status(500).json({ '[Error]': error.message });
   }
