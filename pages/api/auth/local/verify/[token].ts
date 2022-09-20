@@ -1,14 +1,14 @@
-import { findOneUser } from "../../../../server/users/user.services";
-import { signToken } from "../../../../server/auth/local/auth.services";
-import connectDB from '../../../../server/config/database';
-import { useRouter } from "next/router";
+import { findOneUser } from "../../../../../server/users/user.services";
+import { signToken } from "../../../../../server/auth/local/auth.services";
+import connectDB from '../../../../../server/config/database';
+// import { useRouter } from "next/router";
 
 
-export async function verifyAccountHandler(req, res) {
+async function verifyAccountHandler(req, res) {
   await connectDB();
-  const router = useRouter();
 
-  const { token } = router.query;
+  const { token } = req.query;
+  console.log('🚀 ~ file: [token].ts ~ line 11 ~ verifyAccountHandler ~ req', token);
 
   try {
     const user = await findOneUser({ passwordResetToken: token });
@@ -43,3 +43,5 @@ export async function verifyAccountHandler(req, res) {
     return res.status(500).json({ error });
   }
 }
+
+export default verifyAccountHandler;

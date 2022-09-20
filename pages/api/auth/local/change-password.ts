@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import { getSingleUser, updateUser } from '../../../../server/users/user.services';
 import connectDB from '../../../../server/config/database';
 
-export async function changePassword(req, res) {
+async function changePassword(req, res) {
   await connectDB();
 
   try {
@@ -33,3 +33,5 @@ export async function changePassword(req, res) {
     return res.status(400).json({ status: false, error: 'Error Occured' });
   }
 }
+
+export default changePassword;

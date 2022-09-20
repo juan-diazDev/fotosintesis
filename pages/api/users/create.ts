@@ -5,6 +5,7 @@ import { createUser } from '../../../server/users/user.services';
 import { sendMailSendGrid } from '../../../server/config/email'
 
 const BASE_URL = process.env.NEXT_PUBLIC_LOCAL_URL;
+const EMAIL_ID = process.env.SENDGRID_ID;
 
 export default async (req, res) => {
   await connectDB();
@@ -27,7 +28,7 @@ export default async (req, res) => {
       from: 'Juan de Bloggie <dhruva0108@gmail.com>',
       to: user.email,
       subject: 'Activate your Account',
-      template_id: 'd-df1380cc1da24d33ab9f925072819e6f',
+      template_id: EMAIL_ID,
       dynamic_template_data: {
         firstName: user.firstName,
         url: `${BASE_URL}/verify-account/${hash}`
