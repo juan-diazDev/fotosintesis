@@ -51,7 +51,7 @@ function SignupForm() {
             <main className={styles.signup_form__main_container}>
               <section className={styles.signup_form__title_container}>
                 <h2>
-                  Sing-up
+                  Sign-up
                 </h2>
               </section>
               <form onSubmit={handleSubmit}>
