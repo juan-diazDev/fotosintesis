@@ -9,7 +9,6 @@ const VerifyAccount = () => {
   const tokencito = router?.query?.token;
 
   useEffect (() => {
-    console.log('Cris, la buena')
     const verifyAccount = async () => {
       if (tokencito) {
         const { token, profile} = await verify(tokencito);

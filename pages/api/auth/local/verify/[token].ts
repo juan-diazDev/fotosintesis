@@ -8,7 +8,6 @@ async function verifyAccountHandler(req, res) {
   await connectDB();
 
   const { token } = req.query;
-  console.log('🚀 ~ file: [token].ts ~ line 11 ~ verifyAccountHandler ~ req', token);
 
   try {
     const user = await findOneUser({ passwordResetToken: token });
