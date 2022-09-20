@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { verify } from '../../services';
@@ -35,6 +36,11 @@ const VerifyAccount = () => {
 
   return (
     <div className={styles.account_verification__main_container}>
+      <Head>
+        <title>Verifying...</title>
+        <meta name="description" content="Welcome to Bloggie" />
+        <link rel="icon" href="https://res.cloudinary.com/juanito-om/image/upload/v1663682350/Fotos%C3%ADntesis/Logo/Negro_vyop2z.png" />
+      </Head>
       <div className={styles.account_verification__message_container}>
         <div className={styles.account_verification__image_container}>
           <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663440985/PP-assets/Iconografia-05_pbp67i.png" alt="Logo" />

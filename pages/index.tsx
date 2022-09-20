@@ -20,9 +20,9 @@ const Home = ({ data }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Welcome to Bloggie</title>
+        <title>Welcome to Fotosíntesis</title>
         <meta name="description" content="Welcome to Bloggie" />
-        <link rel="icon" href="https://res.cloudinary.com/juanito-om/image/upload/v1663440985/PP-assets/Iconografia-05_pbp67i.png" />
+        <link rel="icon" href="https://res.cloudinary.com/juanito-om/image/upload/v1663682350/Fotos%C3%ADntesis/Logo/Negro_vyop2z.png" />
       </Head>
 
       <main className={styles.main}>
