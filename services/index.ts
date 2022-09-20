@@ -13,7 +13,7 @@ export async function login(auth) {
 }
 
 export async function verify(token) {
-  const response = await fetch(`${BASE_URL}/api/auth/local/verify-account/${token}`);
+  const response = await fetch(`${BASE_URL}/api/auth/local/verify/${token}`);
   return response.json();
 }
 
