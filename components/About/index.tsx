@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import SignupForm from '../SignupModal';
 import styles from '../../styles/About.module.scss';
 
 const About = () => {
@@ -14,11 +14,9 @@ const About = () => {
         <br />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatem soluta? Amet, perferendis doloremque? Architecto esse a, non iste ipsam consequuntur enim maiores cumque expedita, sapiente temporibus rem cupiditate nemo.
       </p>
-      <Link href="/sign-up">
-        <div className={styles.short__description__start__button}>
-          <button>Start reding!</button>
-        </div>
-      </Link>
+      <div className={styles.short__description__start__button}>
+        <SignupForm />
+      </div>
     </section>
   )
 }

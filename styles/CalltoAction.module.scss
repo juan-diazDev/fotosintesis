@@ -14,27 +14,10 @@
     }
   }
   .calltoAction__button_container {
-    width: 50%;
+    width: 12%;
     height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .calltoAction__button {
-      width: 25%;
-      height: 63%;
-      color: #f3e4dd;
-      letter-spacing: 1px;
-      font-size: 1.05rem;
-      border: 2px solid #f3e4dd;
-      border-radius: 20px;
-      background-color: transparent;
-      margin-top: 5%;
-      &:hover {
-        cursor: pointer;
-        transition: .40s;
-        background-color: #f3e4dd;
-        color: #8a644c;
-      }
-    }
   }
 }
