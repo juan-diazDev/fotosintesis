@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styles from '../../styles/Signup.module.scss';
 import { login } from '../../services';
+import { useRouter } from 'next/router';
 
 const BoxStyle = {
   position: 'absolute',
@@ -21,6 +22,7 @@ const LoginForm = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,18 +31,24 @@ const LoginForm = () => {
       const { target } = e;
 
       if (!target) {
-        return console.log({ ERROR: 'No target'})
+        return console.log({ ERROR: 'No target'});
       }
 
       const formData = new FormData(target);
       const data = Object.fromEntries(formData);
 
       if (!data) {
-        return console.log({ ERROR: 'No data'})
+        return console.log({ ERROR: 'No data'});
       }
 
-      const result= await login(data);
-      console.log('🚀 ~ file: index.tsx ~ line 35 ~ handleSubmit ~ token', result);
+      const { token, profile } = await login(data);
+      const result = JSON.stringify(profile)
+
+
+      localStorage.setItem('token', token);
+      localStorage.setItem('profile', result);
+
+      router.push('/')
 
     } catch (error) {
       console.log(error.mesage);
