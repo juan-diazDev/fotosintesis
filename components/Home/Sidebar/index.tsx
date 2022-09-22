@@ -1,7 +1,16 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../../../styles/Sidebar.module.scss';
 
 const Sidebar = () => {
+  const router = useRouter();
+
+  const handleLogout = () => {
+    localStorage.clear()
+
+    router.push('/')
+  }
+
   return (
     <aside className={styles.sidebar__main_conatainer}>
       <Link href="/home">
@@ -55,9 +64,9 @@ const Sidebar = () => {
         </section>
       </nav>
 
-      <section className={styles.sidebar__profile__picture_main_container}>
+      <section onClick={handleLogout} className={styles.sidebar__profile__picture_main_container}>
         <picture className={styles.sidebar__profile__picture_container}>
-          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685394/Fotos%C3%ADntesis/default_icons/user_1_xsewec.png" alt="user_logo" />
+          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663878099/Fotos%C3%ADntesis/default_icons/power-button_fbqkic.png" alt="user_logo" />
         </picture>
       </section>
     </aside>
