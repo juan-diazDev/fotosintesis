@@ -27,9 +27,11 @@ const Sidebar = () => {
 
       <nav className={styles.sidebar__nav__buttons__main_container}>
         <section className={styles.sidebar__home__button__container}>
-          <picture className={styles.sidebar__home__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685165/Fotos%C3%ADntesis/default_icons/house-with-smoking-chimney-hand-drawn-rural-mountain-building_u5efq8.png" alt="home_icon" />
-          </picture>
+          <Link href="/home">
+            <picture className={styles.sidebar__home__button__icon_container}>
+              <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685165/Fotos%C3%ADntesis/default_icons/house-with-smoking-chimney-hand-drawn-rural-mountain-building_u5efq8.png" alt="home_icon" />
+            </picture>
+          </Link>
           {/* <figcaption className={styles.sidebar__home__button__text}>Home</figcaption> */}
         </section>
 
