@@ -30,6 +30,7 @@ const UserSchema = new Schema({
   },
   avatar: {
     type: String,
+    default: 'https://res.cloudinary.com/juanito-om/image/upload/v1663685394/Fotos%C3%ADntesis/default_icons/user_1_xsewec.png'
   },
   description: {
     type: String,

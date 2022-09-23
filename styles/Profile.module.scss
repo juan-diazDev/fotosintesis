@@ -4,4 +4,74 @@
   height: 100vh;
   border-left: 1px solid $green;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .home__aside__profile__avatar__main_container {
+    width: 100%;
+    height: 18%;
+    margin: 0;
+    margin: 0 0 3% 0;
+    .home__aside__profile__avatar_container {
+      width: 32%;
+      height: 100%;
+      margin: 0 0 0 8%;
+      border-radius: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+        padding: 7px;
+        border: .5px solid $green;
+      }
+    }
+  }
+  .home__aside__profile__name_container {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    h2 {
+      width: 45%;
+      margin: 0 0 0% 10%;
+    }
+    p {
+      width: 45%;
+      margin: 0 0 0% 10%;
+      opacity: .6;
+    }
+  }
+  .home__aside__profile__short_container {
+    margin: 5% 0 0% 0;
+    width: 100%;
+    height: 13%;
+    .home__aside__profile__short_description {
+      width: 80%;
+      height: 100%;
+      margin: 0 0 0% 10%;
+    }
+  }
+  .home__aside__profile__button_container {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    margin: 5% 0 0 0;
+    button {
+      height: 67%;
+      width: 35%;
+      margin: 0 0 0% 10%;
+      border: none;
+      background-color: $beige;
+      border-radius: 25px;
+      letter-spacing: .7px;
+      &:hover {
+        transition: .35s ease;
+        cursor: pointer;
+        background-color: $terra;
+        color: $beige;
+      }
+    }
+  }
 }
