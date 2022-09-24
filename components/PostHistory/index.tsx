@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../../styles/PostHistory.module.scss';
 
 const PostHistory = ({ post }) => {

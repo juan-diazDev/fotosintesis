@@ -1,3 +1,4 @@
+import React from 'react';
 import SignupForm from '../SignupModal';
 import styles from '../../styles/CalltoAction.module.scss';
 

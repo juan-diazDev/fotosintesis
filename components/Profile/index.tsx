@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { getUser } from '../../../services/user';
+import React, { useEffect } from 'react';
+import { getUser } from '../../services/user';
 import { useSelector, useDispatch } from 'react-redux';
-import { setGetMeState } from '../../../feature/userSlice';
+import { setGetMeState } from '../../feature/userSlice';
 import styles from '../../../styles/Profile.module.scss';
 import { useRouter } from 'next/router';
 

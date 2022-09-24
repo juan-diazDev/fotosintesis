@@ -1,3 +1,4 @@
+import React from 'react';
 import SignupForm from '../SignupModal';
 import Link from 'next/link';
 import styles from '../../styles/Header.module.scss';

@@ -1,9 +1,9 @@
 import React from 'react'
-import FullProfile from '../../components/FullProfile';
+import Profile from '../../components/Profile'
 
 const profile = () => {
   return (
-    <FullProfile />
+    <Profile />
   )
 }
 
