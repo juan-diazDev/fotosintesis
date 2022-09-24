@@ -56,9 +56,11 @@ const Sidebar = () => {
         <hr className={styles.sidebar__separation__line} />
 
         <section className={styles.sidebar__new__button__container}>
-          <picture className={styles.sidebar__new__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974857/Fotos%C3%ADntesis/Logo/image_6_mo7yzd.png" alt="new_logo" />
-          </picture>
+          <Link href="/create">
+            <picture className={styles.sidebar__new__button__icon_container}>
+              <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974857/Fotos%C3%ADntesis/Logo/image_6_mo7yzd.png" alt="new_logo" />
+            </picture>
+          </Link>
         </section>
       </nav>
 
