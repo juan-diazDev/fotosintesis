@@ -16,11 +16,11 @@ const Sidebar = () => {
       <Link href="/home">
         <section className={styles.sidebar__logo__main_container}>
           <picture className={styles.sidebar__logo_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663682350/Fotos%C3%ADntesis/Logo/Negro_vyop2z.png" alt="logo" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974577/Fotos%C3%ADntesis/Logo/Iconografia-02_nvabow.png" alt="logo" />
         </picture>
 
         <picture className={styles.sidebar__name_logo_container}>
-          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663682370/Fotos%C3%ADntesis/Logo/Negro_sdubwt.png" alt="logo" />
+          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974536/Fotos%C3%ADntesis/Logo/image_1_zkjqf1.png" alt="logo" />
         </picture>
       </section>
       </Link>
@@ -44,7 +44,7 @@ const Sidebar = () => {
 
         <section className={styles.sidebar__favs__button__container}>
           <picture className={styles.sidebar__favs__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663684944/Fotos%C3%ADntesis/default_icons/list_dnjvwz.png" alt="favs_icon" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663972500/Fotos%C3%ADntesis/default_icons/favourite_ylsubb.png" alt="favs_icon" />
           </picture>
           {/* <figcaption className={styles.sidebar__favs__button__text}>Favs</figcaption> */}
         </section>
@@ -60,7 +60,7 @@ const Sidebar = () => {
 
         <section className={styles.sidebar__new__button__container}>
           <picture className={styles.sidebar__new__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685040/Fotos%C3%ADntesis/default_icons/quill-pen_m1pt1x.png" alt="new_logo" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974857/Fotos%C3%ADntesis/Logo/image_6_mo7yzd.png" alt="new_logo" />
           </picture>
           {/* <figcaption className={styles.sidebar__new__button__text}>New</figcaption> */}
         </section>

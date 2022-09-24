@@ -1,3 +1,6 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
 .hero {
   height: 125vh;
   width: 100%;
@@ -86,9 +89,10 @@
       border-radius: 25px;
       font-size: .95rem;
       padding: 10px;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       margin: 0;
       color: antiquewhite;
+      font-family: foto-title;
       &:hover {
         cursor: pointer;
         color: rgb(208, 194, 177);

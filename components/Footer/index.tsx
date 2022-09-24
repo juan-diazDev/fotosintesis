@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer__main_container}>
       <section className={styles.footer__by_container}>
-        <p>© Bloggie by Casa Bhakti</p>
+        <p>©Fotosíntesis by Casa Bhakti</p>
       </section>
       <Link href="/contact">
         <section className={styles.footer__contact_container}>

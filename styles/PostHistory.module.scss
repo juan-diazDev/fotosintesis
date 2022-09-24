@@ -1,3 +1,6 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
 .post__section_container {
   width: 100%;
   height: 85vh;
@@ -12,9 +15,10 @@
     margin: 0;
     margin-top: 5%;
     h2 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       margin-left: 7%;
       letter-spacing: 0.7px;
+      font-family: foto-title;
     }
   }
 
@@ -56,7 +60,8 @@
         p {
           font-weight: 500;
           margin: 0 0 0 2%;
-          font-size: .8rem;
+          font-size: 1rem;
+          font-family: foto-subtitle;
         }
       }
       .post__card__title {
@@ -66,9 +71,10 @@
         h4 {
           padding: 0%;
           margin: 0 0 0 7%;
-          font-size: 1.0rem;
+          font-size: 1.05rem;
           line-height: .9;
           letter-spacing: .7px;
+          font-family: foto-title;
         }
       }
       .post__card__data {
@@ -79,7 +85,8 @@
           margin: 0 2% 0 7%;
           padding: 0;
           opacity: .6;
-          font-size: .9rem;
+          font-size: 1rem;
+          font-family: foto-body;
         }
       }
     }

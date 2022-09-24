@@ -1,3 +1,6 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
 .hero__short__about_container {
   width: 65%;
   height: 60%;
@@ -10,10 +13,15 @@
   h2 {
     text-align: center;
     font-size: 2.5rem;
+    font-family: foto-title;
+    letter-spacing: 1px;
   }
   p {
     font-size: 1.1rem;
     padding: 0px 5%;
+    font-family: foto-body;
+    line-height: 25px;
+    font-size: 1.2rem;
   }
   .short__description__start__button {
     display: flex;

@@ -17,8 +17,8 @@
     padding: 0;
     margin: 0;
     .sidebar__logo_container {
-      margin: 7% 0 0;
-      width: 60%;
+      margin: 20% 0 0;
+      width: 40%;
       &:hover {
         cursor: pointer;
       }
@@ -50,8 +50,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60%;
+    height: 50%;
     width: 100%;
+    margin-bottom: 10%;
     .sidebar__home__button__container {
       height: 11%;
       width: 100%;
@@ -133,7 +134,7 @@
       }
     }
     .sidebar__mine__button__container {
-      height: 11%;
+      height: 12%;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -160,7 +161,7 @@
       }
     }
     .sidebar__new__button__container {
-      height: 11%;
+      height: 15%;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -193,7 +194,7 @@
     justify-content: center;
     align-items: center;
     .sidebar__profile__picture_container {
-      width: 30%;
+      width: 25%;
       display: flex;
       justify-content: center;
       align-items: center;

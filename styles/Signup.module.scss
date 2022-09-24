@@ -1,3 +1,5 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
 
 .signup__button {
   width: 100%;
@@ -5,10 +7,11 @@
   border: .5px solid #8a644c;
   background-color: #8a644c;
   border-radius: 25px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   padding: 10px 25px;
   margin: 0;
   color: #f3e4dd;
+  font-family: foto-title;
   &:hover {
     transition: .45s ease;
     background-color: #f3e4dd;
@@ -25,7 +28,8 @@
   border-radius: 25px;
   font-size: .95rem;
   padding: 10px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  font-family: foto-title;
   margin: 0;
   color: antiquewhite;
   &:hover {
@@ -41,6 +45,7 @@
   align-items: center;
   .signup_form__title_container {
     width: 100%;
+    font-family: foto-title;
     h2 {
       text-align: center;
     }
@@ -57,6 +62,8 @@
       align-items: center;
       margin: 0px 0px 25px;
       width: min-content;
+      font-family: foto-title;
+      font-size: 1rem;
       label {
         input {
           width: 300px;
@@ -67,6 +74,7 @@
           padding: 10px 20px;
           ::placeholder {
             margin-left: 100px;
+            font-family: foto-body;
           }
         }
       }
@@ -85,6 +93,8 @@
       font-size: 1.05rem;
       background: #8a644c;
       color: #f3e4dd;
+      font-family: foto-title;
+      letter-spacing: .7px;
       &:hover {
         transition: .35s ease-in-out;
         background: #f3e4dd ;

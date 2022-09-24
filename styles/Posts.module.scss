@@ -1,0 +1,14 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
+.line {
+margin: 5% 0;
+}
+
+.post__section_container {
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  .post__section__column {
+  }
+}
