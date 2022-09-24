@@ -1,17 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import styles from '../../../styles/Sidebar.module.scss';
 
 const Sidebar = () => {
 
   let avatar = null;
-  useEffect(() => {
+  if (typeof window !== 'undefined') {
     const result = localStorage.getItem('profile');
     const profile = JSON.parse(result);
 
     avatar = profile?.avatar;
-  }, [])
+  }
 
   return (
     <aside className={styles.sidebar__main_conatainer}>
