@@ -17,10 +17,63 @@
   align-items: center;
   flex-direction: column;
   margin: 0 17vw 0 0;
+  .newpost__buttons_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 5% 0 0 0;
+    width: 100%;
+    height: 6vh;
+    .newpost__cancel__buttons_container {
+      width: 10%;
+      height: 100%;display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        font-family: foto-title;
+        &:hover {
+          cursor: pointer;
+          border-bottom: .5px solid $green;
+          opacity: .8;
+        }
+      }
+    }
+
+    .newpost__save__buttons_container {
+      width: 20%;
+      height: 100%;display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5%;
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background-color: $brown;
+        color: $beige;
+        font-size: 1rem;
+        font-family: foto-title;
+        letter-spacing: .7px;
+        border: none;
+        &:hover {
+          transition: .35s ease-in-out;
+          cursor: pointer;
+          background-color: $beige;
+          color: $brown;
+
+        }
+      }
+    }
+  }
+
   .newpost__title_container {
     width: 80%;
     height: 12vh;
-    margin: 10% 0 0 0;
+    margin: 5% 0 0 0;
     input {
       width: 100%;
       height: 100%;

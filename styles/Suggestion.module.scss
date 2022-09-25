@@ -2,6 +2,9 @@
 @import '../SASS_DEFAULT/_fonts.scss';
 
 .suggest__main_conatiner {
+  position: fixed;
+  right: 0px;
+  top: 0px;
   height: 100vh;
   border-left: 1px solid $green;
   width: 25%;
@@ -26,6 +29,7 @@
         border-radius: 25px;
         border: .5px solid $green;
         padding-left: 20px;
+        outline: none;
       }
     }
   }

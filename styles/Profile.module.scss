@@ -2,8 +2,23 @@
 @import '../SASS_DEFAULT/_fonts.scss';
 
 .profile__main_container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 17vw 0 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.profile__section__main_container {
+  border: 2px solid green;
+  width: 65%;
+  height: 100vh;
+  margin: 0 17vw 0 0;
+  .profile__avatar__main_container {
+    border: 2px solid green;
+    width: 10%;
+    height: 10%;
+  }
 }
