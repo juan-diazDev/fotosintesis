@@ -1,7 +1,8 @@
 import Blogpost from "./blogpost.model";
 
 export function getAllBlogposts() {
-  return Blogpost.find({});
+  return Blogpost.find({})
+  .populate({ path: 'writer', model: 'User' });
 }
 
 export function getSingleBlogpost(id) {

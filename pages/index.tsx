@@ -19,6 +19,7 @@ export async function getServerSideProps() {
 }
 
 const Home = ({ data }) => {
+  console.log('🚀 ~ file: index.tsx ~ line 22 ~ Home ~ data', data);
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -37,7 +38,7 @@ const Home = ({ data }) => {
 
       <main className={styles.main}>
         <Header />
-        <PostHistory post={data} />
+        <PostHistory /* post={data} */ />
         <CalltoAction />
         <Footer />
       </main>

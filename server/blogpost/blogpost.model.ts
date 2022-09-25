@@ -19,8 +19,8 @@ const PostSchema = new Schema({
     type: String,
   },
   writer: {
-    type: String,
     type: Schema.Types.ObjectId,
+    ref: 'User',
     require: true,
   },
 }, { versionKey: false, timestamps: true });
