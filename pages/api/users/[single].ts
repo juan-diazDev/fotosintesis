@@ -6,7 +6,6 @@ export default async (req, res) => {
   await connectDB();
 
   const id = req;
-  console.log('🚀 ~ file: [single].tsx ~ line 8 ~ getSingleUserHandler ~ id', id);
   try {
     const user = await getSingleUser(id);
 

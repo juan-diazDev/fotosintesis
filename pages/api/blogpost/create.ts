@@ -1,21 +1,41 @@
 /* eslint-disable import/no-anonymous-default-export */
 import connectDB from '../../../server/config/database';
+import { verfyToken } from '../../../server/auth/local/auth.services';
+import { findUserByEmail } from '../../../server/users/user.services';
 import { createBlogpost } from '../../../server/blogpost/blogpost.services';
 
 export default async (req, res) => {
   await connectDB();
 
-  const spaceData = req.body;
-  // const { _id } = req.user;
-
-  const _id = '632474a0f48585c7244a50ca';
+  if (req.method !== 'POST') {
+    return res.status(405).json({'[ERROR]': 'Method not allowed'});
+  }
 
   try {
-    const post = await createBlogpost({ ...spaceData, writer: _id });
+    const authHeader = req.headers?.authorization;
 
-    if (req.method !== 'POST') {
-      return res.status(405).json({'[ERROR]': 'Method not allowed'});
+    if (!authHeader) {
+      return res.status(401).json({ message: 'Unauthorized' });
     }
+
+    const token = authHeader.split(' ')[1];
+
+    const decoded = await verfyToken(token);
+    if (!decoded) {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    const { email } = decoded;
+    const User = await findUserByEmail(email);
+
+    if (!User) {
+      return res.status(401).json({ message: 'User not found' });
+    }
+
+    req.user = User;
+    const spaceData = req.body;
+    const { _id } = req.user;
+    const post = await createBlogpost({ ...spaceData, writer: _id });
 
     return res.status(200).json({ post })
   } catch (error) {
