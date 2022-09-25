@@ -19,10 +19,6 @@ const Profile = () => {
     userData();
   }, [dispatch]);
 
-  const {
-
-  } = User;
-
   return (
     <aside className={styles.profile__section__main_container}>
 
