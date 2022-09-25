@@ -28,13 +28,13 @@ const Profile = () => {
 
       <section className={styles.profile__avatar__main_container}>
         <figure className={styles.profile__avatar_container}>
-          {/* <img src={User.avatar} alt="avatar" /> */}
+          <img src={User.avatar} alt="avatar" />
         </figure>
       </section>
 
       <section className={styles.rofile__name_container}>
         <h2>
-          {User.firstName} {User.lastName}
+          {User.fullName}
         </h2>
         <p>@{User.username}</p>
       </section>
