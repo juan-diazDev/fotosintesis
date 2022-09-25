@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { createPost } from '../../services/posts';
@@ -30,11 +31,13 @@ const NewPost = () => {
   return (
     <form className={styles.newpost__main_container} onSubmit={handleSubmit}>
       <section className={styles.newpost__buttons_container}>
-        <div className={styles.newpost__cancel__buttons_container}>
-          <button>
-            Cancel
-          </button>
-        </div>
+        <Link href="/home">
+          <div className={styles.newpost__cancel__buttons_container}>
+            <button>
+              Cancel
+            </button>
+          </div>
+        </Link>
 
         <div className={styles.newpost__save__buttons_container}>
           <button type="submit">
