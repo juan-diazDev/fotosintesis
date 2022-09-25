@@ -17,38 +17,32 @@ const Profile = () => {
     }
 
     userData();
-  }, []);
+  }, [dispatch]);
 
   const {
 
   } = User;
 
   return (
-    <aside className={styles.home__aside__profile__main_container}>
+    <aside className={styles.profile__section__main_container}>
 
-      <section className={styles.home__aside__profile__avatar__main_container}>
-        <figure className={styles.home__aside__profile__avatar_container}>
-          <img src={User.avatar} alt="avatar" />
+      <section className={styles.profile__avatar__main_container}>
+        <figure className={styles.profile__avatar_container}>
+          {/* <img src={User.avatar} alt="avatar" /> */}
         </figure>
       </section>
 
-      <section className={styles.home__aside__profile__name_container}>
+      <section className={styles.rofile__name_container}>
         <h2>
           {User.firstName} {User.lastName}
         </h2>
         <p>@{User.username}</p>
       </section>
 
-      <section className={styles.home__aside__profile__short_container}>
-        <div className={styles.home__aside__profile__short_description}>
+      <section className={styles.profile__short_container}>
+        <div className={styles.profile__short_description}>
           <p>{User.shortDescription}</p>
         </div>
-      </section>
-
-      <section className={styles.home__aside__profile__button_container}>
-        <button type="button" onClick={() => router.push('/profile')}>
-          Details
-        </button>
       </section>
     </aside>
   )
