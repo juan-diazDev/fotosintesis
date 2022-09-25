@@ -28,7 +28,7 @@ const VerifyAccount = () => {
     }
 
     setTimeout(() => {
-      router.push('/home');
+      router.push('/profile');
     }, 800);
 
     verifyAccount();
