@@ -72,9 +72,10 @@
           border: 1px solid #8a644c;
           margin-top: 7px;
           padding: 10px 20px;
-          ::placeholder {
+          &::placeholder {
             margin-left: 100px;
-            font-family: foto-body;
+            font-family: foto-subtitle;
+            font-size: .95rem;
           }
         }
       }
