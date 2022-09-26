@@ -30,7 +30,7 @@ export default async (req, res) => {
       subject: 'Activate your Account',
       template_id: EMAIL_ID,
       dynamic_template_data: {
-        firstName: `${user.firstName} ${user.lastName}`,
+        fullName: user.fullName,
         url: `${BASE_URL}/verify-account/${hash}`
       }
     }
