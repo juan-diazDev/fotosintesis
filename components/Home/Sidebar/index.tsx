@@ -1,16 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import styles from '../../../styles/Sidebar.module.scss';
 
 const Sidebar = () => {
 
-  let avatar = null;
-  if (typeof window !== 'undefined') {
-    const result = localStorage.getItem('profile');
-    const profile = JSON.parse(result);
-
-    avatar = profile?.avatar;
-  }
+  const User = useSelector(state => state?.user?.userDetail);
 
   return (
     <aside className={styles.sidebar__main_conatainer}>
@@ -67,7 +62,7 @@ const Sidebar = () => {
       <section className={styles.sidebar__profile__picture_main_container}>
         <Link href="/profile">
           <picture className={styles.sidebar__profile__picture_container}>
-            <img src={avatar} alt="user_logo" />
+            <img src={User.avatar} alt="user_logo" />
           </picture>
         </Link>
       </section>
