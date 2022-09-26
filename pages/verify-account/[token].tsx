@@ -12,7 +12,7 @@ const VerifyAccount = () => {
 
   useEffect (() => {
     const verifyAccount = async () => {
-      if (tokencito) {
+      if(tokencito) {
         const { token, profile} = await verify(tokencito);
         const result = JSON.stringify(profile)
 
@@ -20,15 +20,19 @@ const VerifyAccount = () => {
           return console.log({ ERROR: 'No verify account' })
         }
 
-        if (tokencito) {
-          localStorage.setItem('token', token);
-          localStorage.setItem('profile', result);
+        if(tokencito.message) {
+          return alert (tokencito.message)
         }
+
+        localStorage.setItem('token', token);
+        localStorage.setItem('profile', result);
+
+
       }
     }
 
     setTimeout(() => {
-      router.push('/profile');
+      router.push('/edit-profile');
     }, 800);
 
     verifyAccount();
