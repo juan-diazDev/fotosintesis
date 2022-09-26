@@ -12,16 +12,20 @@ const Profile = () => {
 
   useEffect(() => {
     const userData = async () => {
-      const user = await getUser()
-      dispatch(setGetMeState(user))
+      const user = await getUser();
+
+      if(window !== 'undefined' && user.message) {
+        localStorage.clear();
+        router.push('/');
+      }
+      dispatch(setGetMeState(user));
     }
 
     userData();
-  }, [dispatch]);
+  }, [dispatch, router]);
 
   return (
     <aside className={styles.profile__section__main_container}>
-
       <section className={styles.profile__avatar__main_container}>
         <figure className={styles.profile__avatar_container}>
           <img src={User.avatar} alt="avatar" />
