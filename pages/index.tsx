@@ -18,7 +18,9 @@ export async function getServerSideProps() {
   }
 }
 
-const Home = ({ data }) => {
+const Home = (props) => {
+
+  const data = props?.data;
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem('token');
