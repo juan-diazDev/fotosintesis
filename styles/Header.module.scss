@@ -5,8 +5,8 @@
   height: 125vh;
   width: 100%;
   background-size: cover;
-  background-position: 0% 40%;
-  background-image: url(https://res.cloudinary.com/juanito-om/image/upload/v1663451946/PP-assets/_DSK9858_1_je64ls.jpg);
+  background-position: 0% 100%;
+  background-image: url(https://res.cloudinary.com/juanito-om/image/upload/v1664232351/Fotos%C3%ADntesis/reading4_pgvhh3.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,11 +21,6 @@
   padding: 0%;
   color: antiquewhite;
   width: 100%;
-  &:hover {
-    transition: 0.30s ease;
-    background-color: rgba(189, 182, 182, 0.41);
-    color: antiquewhite;
-  }
   .header__navigation__logo_container {
     width: 20%;
     height: min-content;
@@ -79,7 +74,7 @@
     margin: 0;
     &:hover {
       transition: .40s ease;
-      border-bottom: 4px solid #faebd7;
+      border-bottom: 1px solid #faebd7;
     }
     button {
       width: 100%;
@@ -89,13 +84,14 @@
       border-radius: 25px;
       font-size: .95rem;
       padding: 10px;
-      font-size: 1.15rem;
+      font-size: 1.17rem;
       margin: 0;
-      color: antiquewhite;
+      color: $beige;
+      letter-spacing: .5px;
       font-family: foto-title;
       &:hover {
         cursor: pointer;
-        color: rgb(208, 194, 177);
+        font-weight: bolder;
       }
     }
   }
@@ -108,11 +104,11 @@
     margin: 0 0 0 5%;
     &:hover {
       transition: .40s ease;
-      border-bottom: 4px solid antiquewhite;
+      border-bottom: 1px solid $beige;
     }
   }
   .navbar__get_started__button {
-    width: 35%;
+    width: 40%;
     height: 90%;
     display: flex;
     align-items: center;
@@ -120,7 +116,8 @@
     margin: 0 0 0 5%;
     &:hover {
       transition: .40s ease;
-      border-bottom: 4px solid antiquewhite;
+      border-bottom: 1px solid $beige;
+      font-weight: bolder;
     }
   }
 }

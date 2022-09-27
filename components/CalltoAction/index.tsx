@@ -7,9 +7,9 @@ const CalltoAction = () => {
     <section className={styles.background}>
       <div className={styles.calltoAction__text_container}>
         <h2 className={styles.calltoAction__text}>
-          Text explaining what is this section about,
+          You are about to start your journey
           <br />
-          and why we do it, may be
+          as a writer!
         </h2>
       </div>
       <div className={styles.calltoAction__button_container}>

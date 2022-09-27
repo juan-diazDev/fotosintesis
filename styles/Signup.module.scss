@@ -29,19 +29,21 @@
 .signup__button {
   width: 100%;
   height: 60%;
-  border: .5px solid #8a644c;
-  background-color: #8a644c;
+  border: .5px solid $brown;
+  background-color: $beige;
   border-radius: 25px;
   font-size: 1.15rem;
-  padding: 10px 25px;
+  padding: 7px 25px 10px 25px;
   margin: 0;
-  color: #f3e4dd;
+  color: $black;
   font-family: foto-title;
   &:hover {
     transition: .45s ease;
-    background-color: #f3e4dd;
+    background-color: $brown;
     cursor: pointer;
-    color: #8a644c;
+    color: $beige;
+    font-weight: bolder;
+    font-weight: bolder;
   }
 }
 
@@ -53,13 +55,14 @@
   border-radius: 25px;
   font-size: .95rem;
   padding: 10px;
-  font-size: 1.15rem;
+  font-size: 1.17rem;
   font-family: foto-title;
+  letter-spacing: .5px;
   margin: 0;
-  color: antiquewhite;
+  color: $beige;
   &:hover {
     cursor: pointer;
-    color: rgb(208, 194, 177);
+    font-weight: bolder;
   }
 }
 
@@ -94,7 +97,7 @@
           width: 300px;
           height: 40px;
           border-radius: 20px;
-          border: 1px solid #8a644c;
+          border: 1px solid $brown;
           margin-top: 7px;
           padding: 10px 20px;
           &::placeholder {
@@ -113,18 +116,18 @@
     justify-content: center;
     margin: 20px 0px 10px;
     button {
-      padding: 9px 45px;
+      padding: 9px 45px 11px 45px;
       border: none;
       border-radius: 25px;
       font-size: 1.05rem;
-      background: #8a644c;
-      color: #f3e4dd;
+      background: $brown;
+      color: $beige;
       font-family: foto-title;
       letter-spacing: .7px;
       &:hover {
-        transition: .35s ease-in-out;
-        background: #f3e4dd ;
-        color: #8a644c;
+        transition: .40s ease-in-out;
+        background: $beige;
+        color: $brown;
         cursor: pointer;
       }
     }
