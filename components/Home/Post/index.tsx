@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../../../styles/Posts.module.scss';
 
 const Posts = ({ data }) => {
-  console.log('🚀 ~ file: index.tsx ~ line 5 ~ Posts ~ data', data);
   return (
     <main className={styles.post__section_container}>
       {
