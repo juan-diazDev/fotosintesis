@@ -57,7 +57,7 @@ function EditProfile() {
 
       if(window !== 'undefined' && user.message) {
         localStorage.clear();
-        // router.push('/');
+        router.push('/');
       }
       dispatch(setGetMeState(user));
     }
