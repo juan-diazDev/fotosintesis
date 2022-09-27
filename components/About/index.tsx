@@ -1,3 +1,4 @@
+import React from 'react';
 import SignupForm from '../SignupModal';
 import styles from '../../styles/About.module.scss';
 
@@ -5,7 +6,7 @@ const About = () => {
   return (
     <section className={styles.hero__short__about_container}>
       <h2>
-        About us
+        Why Fotosíntesis
       </h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis mollitia, earum sint amet suscipit quasi assumenda. Dolore debitis nulla minus, tempora commodi perspiciatis. Reiciendis, sequi quaerat consequuntur molestias odit sit.

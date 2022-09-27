@@ -2,15 +2,10 @@ import { Schema, model, models} from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const UserSchema = new Schema({
-  firstName: {
+  fullName: {
     type: String,
     trim: true,
-    default: "Happy",
-  },
-  lastName: {
-    type: String,
-    trim: true,
-    default: "user",
+    default: "Happy User",
   },
   username: {
     type: String,
@@ -30,6 +25,7 @@ const UserSchema = new Schema({
   },
   avatar: {
     type: String,
+    default: 'https://res.cloudinary.com/juanito-om/image/upload/v1663685394/Fotos%C3%ADntesis/default_icons/user_1_xsewec.png'
   },
   description: {
     type: String,

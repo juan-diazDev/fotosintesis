@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import CalltoAction from '../components/CalltoAction'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import PostHistory from '../components/PostHistory'
-import styles from '../styles/Home.module.scss'
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import CalltoAction from '../components/CalltoAction';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import PostHistory from '../components/PostHistory';
+import styles from '../styles/Home.module.scss';
 
 const BASE_URL = process.env.NEXT_PUBLIC_LOCAL_URL;
 
@@ -17,6 +19,14 @@ export async function getServerSideProps() {
 }
 
 const Home = ({ data }) => {
+  const router = useRouter();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    if(token) {
+      router.push('/home')
+    }
+  }, [router]);
   return (
     <div className={styles.container}>
       <Head>

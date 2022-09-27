@@ -33,6 +33,7 @@ async function loginUserHandler(req, res) {
       username: user.username,
       firstName: user.firstName,
       lastName: user.lastName,
+      avatar: user.avatar,
     }
 
     return res.status(200).json({

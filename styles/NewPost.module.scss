@@ -1,0 +1,107 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
+.newpost__page__main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.newpost__main_container {
+  width: 65%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 17vw 0 0;
+  .newpost__buttons_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 5% 0 0 0;
+    width: 100%;
+    height: 6vh;
+    .newpost__cancel__buttons_container {
+      width: 10%;
+      height: 100%;display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        font-family: foto-title;
+        &:hover {
+          cursor: pointer;
+          border-bottom: .5px solid $green;
+          opacity: .8;
+        }
+      }
+    }
+
+    .newpost__save__buttons_container {
+      width: 20%;
+      height: 100%;display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5%;
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background-color: $brown;
+        color: $beige;
+        font-size: 1rem;
+        font-family: foto-title;
+        letter-spacing: .7px;
+        border: none;
+        &:hover {
+          transition: .35s ease-in-out;
+          cursor: pointer;
+          background-color: $beige;
+          color: $brown;
+
+        }
+      }
+    }
+  }
+
+  .newpost__title_container {
+    width: 80%;
+    height: 12vh;
+    margin: 5% 0 0 0;
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: 2.2rem;
+      font-family: foto-title;
+      letter-spacing: 2px;
+      &::placeholder {
+        font-size: 2.3rem;
+        font-family: foto-title;
+        opacity: .7;
+      }
+    }
+  }
+  .newpost__text_container {
+    width: 80%;
+    min-height: 70vh;
+    textarea {
+      border: none;
+      outline: none;
+      font-size: 1.1rem;
+      font-family: foto-body;
+      &::placeholder {
+        font-size: 1.1rem;
+        font-family: foto-body;
+        opacity: .7;
+      }
+    }
+  }
+}

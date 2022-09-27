@@ -1,8 +1,12 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
 .background {
   width: 100%;
   height: 60vh;
-  background-color: #8a644c;
-  color: #f3e4dd;
+  background-size: cover;
+  background-image: url(https://res.cloudinary.com/juanito-om/image/upload/v1664235992/Fotos%C3%ADntesis/Texturas_Mesa_de_trabajo_1_copia_4_vvyjgn.png);
+  color: $black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,13 +15,24 @@
     .calltoAction__text {
       text-align: center;
       font-size: 3rem;
+      font-family: foto-title;
     }
   }
   .calltoAction__button_container {
-    width: 12%;
-    height: 15%;
+    width: 15%;
+    height: 16%;
     display: flex;
     justify-content: center;
     align-items: center;
+    button {
+      background-color: $black;
+      color: $beige;
+      &:hover {
+        transition: .4s ease-in-out;
+        background-color: $beige;
+        color: $black;
+        border: none;
+      }
+    }
   }
 }

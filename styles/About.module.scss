@@ -1,19 +1,29 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
 .hero__short__about_container {
   width: 65%;
   height: 60%;
   position: relative;
-  top: 5%;
+  top: 20%;
   padding: 45px 50px 60px;
-  background-color: rgb(250, 245, 238);
+  background-color: $brown;
   margin: 0;
   border-radius: 2px;
   h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-family: foto-title;
+    letter-spacing: 1px;
+    color: $black;
   }
   p {
     font-size: 1.1rem;
     padding: 0px 5%;
+    font-family: foto-body;
+    line-height: 25px;
+    font-size: 1.2rem;
+    color: $black;
   }
   .short__description__start__button {
     display: flex;
@@ -26,14 +36,14 @@
       height: 95%;
       width: 23%;
       border-radius: 25px;
-      border: .5px solid #8a644c;
-      background-color: #8a644c;
-      color: #f3e4dd;
+      border: .5px solid $beige;
+      background-color: $beige;
+      color: $black;
       font-size: 1.1rem;
       &:hover {
         transition: .45s ease;
-        background-color: #f3e4dd;
-        color: #8a644c;
+        background-color: $brown;
+        color: $beige;
         cursor: pointer;
       }
     }

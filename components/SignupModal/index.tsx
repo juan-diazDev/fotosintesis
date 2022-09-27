@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styles from '../../styles/Signup.module.scss';
@@ -35,9 +35,11 @@ function SignupForm() {
 
       const result = await signup(data);
 
-      if(result) {
-        router.push('/verify-account');
+      if(result?.Error) {
+        alert('error')
       }
+
+      router.push('/verify-account');
     } catch (error) {
       console.log(error.mesage);
     }
@@ -59,7 +61,7 @@ function SignupForm() {
                   <label htmlFor="username">
                     Username
                     <br />
-                    <input type="text" name="username"  placeholder="username" />
+                    <input type="text" name="username"  placeholder="username" required />
                   </label>
                 </section>
 
@@ -67,7 +69,7 @@ function SignupForm() {
                   <label htmlFor="email">
                     e-mail
                     <br />
-                    <input type="email" name="email" id="email" placeholder="email" />
+                    <input type="email" name="email" id="email" placeholder="email" required />
                   </label>
                 </section>
 
@@ -75,7 +77,7 @@ function SignupForm() {
                   <label htmlFor="password">
                     Password
                     <br />
-                    <input type="password" name="password" id="password" placeholder="password" />
+                    <input type="password" name="password" id="password" placeholder="password" required />
                   </label>
                 </section>
 

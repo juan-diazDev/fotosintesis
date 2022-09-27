@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styles from '../../styles/Signup.module.scss';
@@ -19,6 +20,7 @@ const BoxStyle = {
 };
 
 const LoginForm = () => {
+  const [spinner, setSpinner] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -41,15 +43,21 @@ const LoginForm = () => {
         return console.log({ ERROR: 'No data'});
       }
 
-      const { token, profile } = await login(data);
-      const result = JSON.stringify(profile)
+      const result = await login(data);
 
+      const { token, profile } = result;
+
+      if(!token) {
+        alert('error')
+      }
+
+      const userData = JSON.stringify(profile)
 
       localStorage.setItem('token', token);
-      localStorage.setItem('profile', result);
+      localStorage.setItem('profile', userData);
 
       if(token) {
-        router.push('/home')
+        router.push('/profile')
       }
 
     } catch (error) {
@@ -74,7 +82,7 @@ const LoginForm = () => {
                   <label htmlFor="email">
                     e-mail
                     <br />
-                    <input type="email" name="email" id="email" placeholder="email" />
+                    <input type="email" name="email" id="email" placeholder="email" required />
                   </label>
                 </section>
 
@@ -82,7 +90,7 @@ const LoginForm = () => {
                   <label htmlFor="password">
                     Password
                     <br />
-                    <input type="password" name="password" id="password" placeholder="password" />
+                    <input type="password" name="password" id="password" placeholder="password" required />
                   </label>
                 </section>
 

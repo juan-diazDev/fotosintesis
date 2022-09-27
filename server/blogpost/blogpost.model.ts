@@ -4,23 +4,23 @@ const PostSchema = new Schema({
   title: {
     type: String,
     required: true,
+    trim: true,
   },
-  text: {
+  body: {
     type: String,
     required: true,
+    trim: true,
   },
   headerImage: {
     type: String,
-  },
-  likes: {
-    type: String,
+    default: 'https://res.cloudinary.com/juanito-om/image/upload/v1664065543/Fotos%C3%ADntesis/_DSK9648_ctkxp1.jpg',
   },
   saved: {
     type: String,
   },
   writer: {
-    type: String,
-    // type: Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
+    ref: 'User',
     require: true,
   },
 }, { versionKey: false, timestamps: true });

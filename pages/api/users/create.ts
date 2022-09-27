@@ -25,12 +25,12 @@ export default async (req, res) => {
     const user = await createUser(userData);
 
     const message = {
-      from: 'Juan de Bloggie <dhruva0108@gmail.com>',
+      from: 'Fotosíntesis <dhruva0108@gmail.com>',
       to: user.email,
       subject: 'Activate your Account',
       template_id: EMAIL_ID,
       dynamic_template_data: {
-        firstName: user.firstName,
+        fullName: user.fullName,
         url: `${BASE_URL}/verify-account/${hash}`
       }
     }

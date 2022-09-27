@@ -1,0 +1,126 @@
+@import '../SASS_DEFAULT/_colors.scss';
+@import '../SASS_DEFAULT/_fonts.scss';
+
+.editProfile_form__main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .edit_profile_image_container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .editProfile_form__title_container {
+    width: 45%;
+    margin: 3% 0 0 5%;
+    h2 {
+      font-family: foto-title;
+      font-size: 2rem;
+    }
+  }
+
+  form {
+    width: 45%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 0 5%;
+    .editProfile_form__avatar_container {
+      width: 100%;
+      height: 15%;
+      margin-bottom: 2%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      label {
+        font-family: foto-title;
+        font-size: 1.15rem;
+        margin: 0;
+        input {
+          margin: 2% 0 0 0;
+        }
+      }
+      .new__profile__picture_container {
+        width: 100px;
+        height: 100px;
+        margin-right: 35%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: none;
+        }
+      }
+    }
+
+    .editProfile_form__label_container {
+      width: 100%;
+      height: 15%;
+      margin-bottom: 3%;
+      label {
+        font-family: foto-title;
+        font-size: 1.15rem;
+        margin: 0;
+        input {
+          width: 47%;
+          height: 60%;
+          border: .5px solid $black;
+          margin: 1% 0 0 0;
+          border-radius: 25px;
+          padding: 0 20px;
+          outline: none;
+          &::placeholder {
+            font-family: foto-body;
+            font-size: .95rem;
+          }
+        }
+        textarea {
+          padding: 10px 20px;
+          outline: none;
+          margin: 1% 0 0 0;
+          border-radius: 25px;
+          border: .5px solid $black;
+          &::placeholder {
+            font-family: foto-body;
+            font-size: .95rem;
+          }
+        }
+      }
+    }
+
+    .editProfile_form__button_container {
+      width: 100%;
+      height: 10%;
+      margin: 18% 0 0 0;
+      button {
+        width: 47%;
+        height: 100%;
+        border-radius: 25px;
+        border: none;
+        background-color: $brown;
+        color: $beige;
+        font-family: foto-title;
+        font-size: .95rem;
+        &:hover {
+          transition: .4s ease-in-out;
+          background-color: $beige;
+          color: $brown;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
