@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { getUser, updateUser } from '../../services/user';
 import { setGetMeState } from '../../feature/userSlice';
 import uploadFile from '../../services/upload';
-import styles from '../../styles/Signup.module.scss';
+import styles from '../../styles/EditProfile.module.scss';
 
 function EditProfile() {
   const [image, setImage] = useState("");
@@ -24,7 +24,6 @@ function EditProfile() {
     data.append("upload_preset", "my-uploads");
 
     const file = await uploadFile(data);
-    console.log('🚀 ~ file:', file);
     setImage(file?.secure_url);
   }
 
@@ -58,7 +57,7 @@ function EditProfile() {
 
       if(window !== 'undefined' && user.message) {
         localStorage.clear();
-        router.push('/');
+        // router.push('/');
       }
       dispatch(setGetMeState(user));
     }
@@ -67,27 +66,18 @@ function EditProfile() {
   }, [dispatch, router]);
 
   return (
-    <main className={styles.signup_form__main_container}>
-      <figure className={styles.edit_profile_image_container}>
+    <main className={styles.editProfile_form__main_container}>
+      {/* <figure className={styles.edit_profile_image_container}>
         <img src="https://res.cloudinary.com/juanito-om/image/upload/v1664165199/Fotos%C3%ADntesis/386714176-removebg-preview_lrumnc.png" alt="decoration" />
-      </figure>
+      </figure> */}
 
-      <section className={styles.signup_form__title_container}>
+      <section className={styles.editProfile_form__title_container}>
         <h2>
           Tell us more about you
         </h2>
       </section>
       <form onSubmit={handleSubmit}>
-        {
-          image !== ""
-            ? (
-              <figure className={styles.new__profile__picture_container}>
-                <img src={image} alt="New profile picture" />
-              </figure>
-            )
-            : null
-        }
-        <section className={styles.signup_form__label_container}>
+        <section className={styles.editProfile_form__avatar_container}>
           <label htmlFor="avatar">
             Avatar
             <br />
@@ -99,9 +89,18 @@ function EditProfile() {
               onChange={uploadImage}
               required />
           </label>
+          {
+            image !== ""
+              ? (
+                <figure className={styles.new__profile__picture_container}>
+                  <img src={image} alt="New profile picture" />
+                </figure>
+              )
+              : null
+          }
         </section>
 
-        <section className={styles.signup_form__label_container}>
+        <section className={styles.editProfile_form__label_container}>
           <label htmlFor="fullName">
           What´s your name?
             <br />
@@ -109,24 +108,24 @@ function EditProfile() {
           </label>
         </section>
 
-        <section className={styles.signup_form__label_container}>
+        <section className={styles.editProfile_form__label_container}>
           <label htmlFor="description">
-            Who you are?
+            Short description
             <br />
             <input type="text" name="shortDescription"  placeholder="Write here..." required />
           </label>
         </section>
 
 
-        <section className={styles.signup_form__label_container}>
+        <section className={styles.editProfile_form__label_container}>
           <label htmlFor="description">
             Tell us your story
             <br />
-            <textarea placeholder="Let us know you" name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea placeholder="Let us know you" name="description" id="description" cols="37" rows="10" />
           </label>
         </section>
 
-        <section className={styles.signup_form__button_container}>
+        <section className={styles.editProfile_form__button_container}>
           <button type="submit">Let's see you</button>
         </section>
 

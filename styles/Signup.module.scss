@@ -1,31 +1,6 @@
 @import '../SASS_DEFAULT/_colors.scss';
 @import '../SASS_DEFAULT/_fonts.scss';
 
-.edit_profile_image_container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30%;
-  height: 30%;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-.new__profile__picture_container {
-  width: 100px;
-  height: 100px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: none;
-  }
-}
-
 .signup__button {
   width: 100%;
   height: 60%;
@@ -100,6 +75,7 @@
           border: 1px solid $brown;
           margin-top: 7px;
           padding: 10px 20px;
+          outline: none;
           &::placeholder {
             margin-left: 100px;
             font-family: foto-subtitle;
