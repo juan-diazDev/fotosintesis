@@ -12,11 +12,11 @@ const Sidebar = () => {
       <Link href="/home">
         <section className={styles.sidebar__logo__main_container}>
           <picture className={styles.sidebar__logo_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974577/Fotos%C3%ADntesis/Logo/Iconografia-02_nvabow.png" alt="logo" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663964727/Fotos%C3%ADntesis/Logo/Negro_a8rslr.png" alt="logo" />
         </picture>
 
         <picture className={styles.sidebar__name_logo_container}>
-          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663974536/Fotos%C3%ADntesis/Logo/image_1_zkjqf1.png" alt="logo" />
+          <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663682370/Fotos%C3%ADntesis/Logo/Negro_sdubwt.png" alt="logo" />
         </picture>
       </section>
       </Link>
@@ -25,26 +25,26 @@ const Sidebar = () => {
         <section className={styles.sidebar__home__button__container}>
           <Link href="/home">
             <picture className={styles.sidebar__home__button__icon_container}>
-              <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685165/Fotos%C3%ADntesis/default_icons/house-with-smoking-chimney-hand-drawn-rural-mountain-building_u5efq8.png" alt="home_icon" />
+              <img src="https://res.cloudinary.com/juanito-om/image/upload/v1664247303/Fotos%C3%ADntesis/Logo/001-home_j4numf.png" alt="home_icon" />
             </picture>
           </Link>
         </section>
 
         <section className={styles.sidebar__notification__button__container}>
           <picture className={styles.sidebar__notification__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685006/Fotos%C3%ADntesis/default_icons/bell_1_vjtqeb.png" alt="notification_icon" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1664247303/Fotos%C3%ADntesis/Logo/009-bell_fkms09.png" alt="notification_icon" />
           </picture>
         </section>
 
         <section className={styles.sidebar__favs__button__container}>
           <picture className={styles.sidebar__favs__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663972500/Fotos%C3%ADntesis/default_icons/favourite_ylsubb.png" alt="favs_icon" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1664247303/Fotos%C3%ADntesis/Logo/008-heart_nrwujv.png" alt="favs_icon" />
           </picture>
         </section>
 
         <section className={styles.sidebar__mine__button__container}>
           <picture className={styles.sidebar__mine__button__icon_container}>
-            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1663685526/Fotos%C3%ADntesis/default_icons/to-do-list_pf4fid.png" alt="mine_logo" />
+            <img src="https://res.cloudinary.com/juanito-om/image/upload/v1664247303/Fotos%C3%ADntesis/Logo/007-book_qlxhvq.png" alt="mine_logo" />
           </picture>
         </section>
 

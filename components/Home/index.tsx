@@ -4,11 +4,11 @@ import styles from '../../styles/Home.module.scss';
 import Posts from './Post';
 import Suggest from './Suggest';
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
   return (
     <main className={styles.homepage__main_container}>
       <Sidebar />
-      <Posts />
+      <Posts data={data}/>
       <Suggest />
     </main>
   )

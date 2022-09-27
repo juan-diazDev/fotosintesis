@@ -57,7 +57,7 @@ const LoginForm = () => {
       localStorage.setItem('profile', userData);
 
       if(token) {
-        router.push('/home')
+        router.push('/profile')
       }
 
     } catch (error) {

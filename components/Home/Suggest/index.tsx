@@ -23,24 +23,17 @@ const Suggest = () => {
 
       <section className={styles.suggest__title_conatiner}>
         <div>
-          <h2>Suggestions!</h2>
+          <h2>Stay inspired!</h2>
         </div>
       </section>
 
-      <section className={styles.suggest__content_conatiner}></section>
+      {/* <section className={styles.suggest__content_conatiner}></section> */}
 
       <section className={styles.suggest__frase_container}>
         <div>
           <h3>
-            Serve, Love, Give,
-            purify, meditate, realize
+          Fotosíntesis is a process where plants can make themselves grow, then be at the service of others. <br /><br /> This project was born in order to allow us to cultivate ourselves writing and serviing through sharing.
           </h3>
-        </div>
-      </section>
-
-      <section className={styles.suggest__media_container}>
-        <div>
-          <img src="" alt="" />
         </div>
       </section>
 

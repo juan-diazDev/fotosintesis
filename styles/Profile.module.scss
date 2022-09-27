@@ -18,11 +18,10 @@
   .profile__avatar__main_container {
     width: 100%;
     height: 20%;
-    margin: 10% 0 0 0;
+    margin: 7% 0 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid red;
     .profile__avatar_container {
       height: 80%;
       width: 11%;
@@ -35,22 +34,10 @@
         border-radius: 50%;
       }
     }
-    div {
-      height: 100%;
-      label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        border: 2px solid red;
-      }
-    }
   }
 
-  .rofile__name_container {
-    margin: 1% 0 0 0 ;
+  .profile__name_container {
+    margin: 1% 0 0 0;
     h2 {
       width: 50%;
       font-size: 2.5rem;
@@ -66,4 +53,31 @@
       opacity: .6;
     }
   }
+
+  .profile__short_container {
+    margin: 1% 0 0 0;
+    .profile__short_description {
+      width: 50%;
+      font-family: foto-body;
+      font-size: 1.2rem;
+      margin: 0 0 0 9%;
+    }
+  }
+
+  .profile__description_container {
+    margin: 1% 0 0 0;
+    .profile__short_description {
+      width: 50%;
+      font-family: foto-body;
+      font-size: 1.2rem;
+      margin: 0 0 0 9%;
+    }
+  }
+}
+
+.hr {
+  border: none;
+  border-top: .5px solid $black;
+  width: 60%;
+  margin: 5% 7%;
 }

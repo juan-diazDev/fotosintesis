@@ -1,35 +1,43 @@
 import React from 'react';
 import styles from '../../../styles/Posts.module.scss';
 
-const Posts = () => {
+const Posts = ({ data }) => {
+  console.log('🚀 ~ file: index.tsx ~ line 5 ~ Posts ~ data', data);
   return (
     <main className={styles.post__section_container}>
-      <section className={styles.post__section__column}>
-        <article>
-          <section className={styles.post__card__writer}>
-            <figure>
-              <img src="" alt="" />
-            </figure>
-            <p>Ella Ortiz</p>
+      {
+        data?.map((post) => (
+          <section className={styles.post__section__column} key={post._id}>
+            <article>
+              <section className={styles.post__card__writer}>
+                <figure>
+                  <img src={post?.writer?.avatar} alt="profile-foto" />
+                </figure>
+                <p>{post?.writer?.fullName}</p>
+              </section>
+
+              <section className={styles.post__card__title}>
+                <h4>{post?.title}</h4>
+              </section>
+
+              <section className={styles.post__card__text}>
+                <p>{post?.body}</p>
+              </section>
+
+              <section className={styles.post__card__date}>
+                <p className={styles.date}>{post?.createdAt}</p>
+              </section>
+            </article>
+
+            <div>
+              <figure>
+                <img src="" alt="" />
+              </figure>
+            </div>
           </section>
-
-          <section className={styles.post__card__title}>
-            <h4>Este va a ser el título del POst que viene en esta seción.</h4>
-          </section>
-
-          <section className={styles.post__card__data}>
-            <p className={styles.date}>Oct 17</p>
-          </section>
-        </article>
-
-        <div>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-      </section>
-
-    <hr className={styles.line} />
+        ))
+      }
+      <hr className={styles.line} />
     </main>
   )
 }

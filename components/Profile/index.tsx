@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { getUser } from '../../services/user';
 import { useSelector, useDispatch } from 'react-redux';
 import { setGetMeState } from '../../feature/userSlice';
-import styles from '../../styles/Profile.module.scss';
 import { useRouter } from 'next/router';
+import styles from '../../styles/Profile.module.scss';
 
 const Profile = () => {
   const router = useRouter();
@@ -32,7 +32,7 @@ const Profile = () => {
         </figure>
       </section>
 
-      <section className={styles.rofile__name_container}>
+      <section className={styles.profile__name_container}>
         <h2>
           {User.fullName}
         </h2>
@@ -42,6 +42,14 @@ const Profile = () => {
       <section className={styles.profile__short_container}>
         <div className={styles.profile__short_description}>
           <p>{User.shortDescription}</p>
+        </div>
+      </section>
+
+      <hr className={styles.hr}/>
+
+      <section className={styles.profile__description_container}>
+        <div className={styles.profile__short_description}>
+          <p>{User.description}</p>
         </div>
       </section>
     </aside>
